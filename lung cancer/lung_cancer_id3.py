@@ -80,7 +80,7 @@ def du_doan(mau, cay):
 
 
 
-data = open('./lung_cancer_testing.csv', encoding='utf8').readlines()
+data = open('./lung_cancer_traning.csv', encoding='utf8').readlines()
 #tiền xử lý dữ liệu
 data_traning = []
 attributes = ["giới tính", "tuổi", "hút thuốc", "vàng ngón tay", "sự lo sợ", "áp lực đồng trang lứa", "bệnh mãn tính", "mệt mỏi", "dị ứng", "thở khò khè", "rượu", "ho", "hụt hơi", "khó nuốt", "đau ngực", "ung thư phổi"]
@@ -178,8 +178,6 @@ for row in test_data:
 # Kiểm tra mô hình và in kết quả
 ket_qua_kiem_tra = kiem_tra_mo_hinh(test_data_processed, test_labels, cay_quyet_dinh)
 
-# In chi tiết kết quả cho từng mẫu
-print(json.dumps(ket_qua_kiem_tra, indent=4, ensure_ascii=False))
 
 
 # print("Dự đoán cho mẫu mới:", du_doan_ket_qua)
